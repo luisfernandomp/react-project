@@ -101,13 +101,7 @@ label {
   align-items: center;
 }
 
-.text-red-400 {
-  font-size: 9px;
-  color: red;
-  text-transform: lowercase;
-  padding-top: 6px;
-  padding-left: 6px;
-}
+
 
 .submit {
   padding: 10px 13px;
@@ -122,10 +116,6 @@ label {
 {
   .edit-details{
     max-width: 900px;
-  }
-
-  .text-red-400 {
-    font-size: 12px;
   }
 }
 

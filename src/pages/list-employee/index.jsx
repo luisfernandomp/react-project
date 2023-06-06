@@ -108,9 +108,6 @@ export default function ListEmployee() {
   return (
     <div className="container-list-employee">
       <div className="jumbotron">
-        <div className="title-app">
-          <h1>Gestor de Funcionários</h1>
-        </div>
       </div>
       <div className="list-employee">
       <button className="new-employee" onClick={newEmployee}>

@@ -50,7 +50,6 @@ export default function CreateEmployee() {
       name: Yup.string()
         .min(5, "Mínimo de 5 caracteres")
         .required("Nome obrigatório"),
-      date: Yup.date().required("Data obrigatória"),
       avatar: Yup.string()
         .matches(
           /((https?):\/\/)?(www.)?[a-z0-9]+(\.[a-z]{2,}){1,3}(#?\/?[a-zA-Z0-9#]+)*\/?(\?[a-zA-Z0-9-_]+=[a-zA-Z0-9-%]+&?)?$/,
@@ -136,6 +135,7 @@ export default function CreateEmployee() {
               type="text"
               placeholder="Nome"
               onChange={formik.handleChange}
+              onBlur={(e) => formik.setFieldTouched("name", e)}
               value={formik.values.name}
               className="input-details"
             />
@@ -151,6 +151,7 @@ export default function CreateEmployee() {
               placeholder="Email"
               type="text"
               onChange={formik.handleChange}
+              onBlur={(e) => formik.setFieldTouched("email", e)}
               value={formik.values.email}
               className="input-details"
             />
@@ -166,6 +167,7 @@ export default function CreateEmployee() {
               placeholder="https://example.com"
               type="text"
               onChange={formik.handleChange}
+              onBlur={(e) => formik.setFieldTouched("avatar", e)}
               value={formik.values.avatar}
               className="input-details"
             />
@@ -182,6 +184,7 @@ export default function CreateEmployee() {
               prefix="R$"
               placeholder="Informe um valor"
               decimalsLimit={2}
+              onBlur={(e) => formik.setFieldTouched("salary", e)}
               value={formik.values.salary}
               onValueChange={(value) => {
                 formik.setFieldValue("salary", value);
@@ -204,6 +207,7 @@ export default function CreateEmployee() {
               placeholderText="Informe uma data"
               autoclose={true}
               todayHighlight={true}
+              onBlur={(e) => formik.setFieldTouched("date", e)}
               dateFormat="dd/MM/yyyy"
               selected={formik.values.date}
               onChange={(value) => {

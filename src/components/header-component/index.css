@@ -15,7 +15,7 @@ header {
 }
 
 .logo {
-  width: 55px;
+  width: 36px;
   object-fit: cover;
   margin-right: 1rem;
 }
@@ -39,10 +39,6 @@ header {
     height: 56px;
   }
 
-  .logo{
-    width: 36px;
-  }
-
   .menu{
     font-size: 0.9em;
   }
@@ -55,7 +51,13 @@ header {
 @media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 992px) 
+{
+  .logo{
+    width: 46px;
+    
+  }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) 
@@ -66,11 +68,11 @@ header {
   }
 
   .logo{
-    width: 36px;
+    width: 46px;
     
   }
 
   .menu{
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 }

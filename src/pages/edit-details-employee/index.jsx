@@ -141,6 +141,7 @@ export default function EditAndDetailsEmployee() {
             placeholder="Email"
             disabled={edit !== "true"}
             type="text"
+            onBlur={(e) => formik.setFieldTouched("email", e)}
             onChange={formik.handleChange}
             value={formik.values.email}
             className="input-details"
@@ -157,6 +158,7 @@ export default function EditAndDetailsEmployee() {
             disabled={edit !== "true"}
             prefix="R$"
             placeholder="Informe um valor"
+            onBlur={(e) => formik.setFieldTouched("salary", e)}
             decimalsLimit={2}
             value={formik.values.salary}
             onValueChange={(value) => {
@@ -181,6 +183,7 @@ export default function EditAndDetailsEmployee() {
             disabled={edit !== "true"}
             todayHighlight={true}
             dateFormat="dd/MM/yyyy"
+            onBlur={(e) => formik.setFieldTouched("date", e)}
             selected={formik.values.date}
             onChange={(value) => {
               formik.setFieldValue("date", value);
