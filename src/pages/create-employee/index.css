@@ -1,0 +1,10 @@
+.avatar-image-url {
+  width: 330px;
+  height: 200px;
+  border-radius: 5px;
+  background-size: cover;
+  margin: 18px;
+  display: flex;
+  align-self: center;
+  background-position: center;
+}

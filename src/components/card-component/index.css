@@ -1,0 +1,84 @@
+article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+.info-employee {
+  width: 95%;
+  height: 78px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  -webkit-box-shadow: 10px 10px 20px -16px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 10px 10px 20px -16px rgba(0, 0, 0, 0.12);
+  box-shadow: 10px 10px 20px -16px rgba(0, 0, 0, 0.12);
+}
+
+.info-employee:hover {
+  -webkit-box-shadow: 10px 10px 20px 3px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 10px 10px 20px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 10px 10px 20px 3px rgba(0, 0, 0, 0.12);
+}
+
+.image-user {
+  width: 80px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 1em;
+  border-radius: 8px 0 0 8px;
+  background-position: center;
+  background-size: cover;
+}
+
+.text-negrito {
+  font-size: 0.8em !important;
+}
+
+.info {
+  font-size: 0.7em;
+}
+
+.details {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit {
+  padding: 4.5%;
+  font-size: 1.1em;
+  color: gray;
+}
+
+.edit:hover {
+  color: #f2b950;
+}
+
+.status {
+  margin-top: 4px;
+  height: 20px;
+  width: 56px;
+  border-radius: 50px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.8em;
+  text-transform: lowercase;
+  text-align: center;
+  text-shadow: 2px 5px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-ativo {
+  background-color: greenyellow;
+}
+
+.status-inativo {
+  background-color: red;
+}

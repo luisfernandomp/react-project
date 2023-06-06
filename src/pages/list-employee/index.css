@@ -1,0 +1,30 @@
+.jumbotron {
+  width: 100%;
+  height: 140px;
+  background-image: url("../../../assets/images/tec-rh.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.title-app {
+  width: 50%;
+  font-size: 0.8em;
+  color: #ffffff;
+  margin-left: 9px;
+  text-transform: uppercase;
+  text-shadow: 5px 3px 7px rgba(0, 0, 0, 0.17);
+}
+
+.new-employee {
+  border: 0;
+  padding: 13px 18px;
+  color: #ffffff;
+  font-size: 0.6em;
+  font-weight: 600;
+  background-color: green;
+  border-radius: 30px;
+  margin-left: 13px;
+  margin-top: 10px;
+}

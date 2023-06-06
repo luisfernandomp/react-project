@@ -1,0 +1,32 @@
+header {
+  height: 80px;
+  width: 100%;
+  -webkit-box-shadow: 2px 14px 17px -7px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 2px 14px 17px -7px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 14px 17px -7px rgba(0, 0, 0, 0.2);
+  padding: 4%;
+  display: flex;
+  align-items: center;
+  background-color: #232526;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999 !important;
+  position: relative;
+}
+
+.logo {
+  width: 55px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.name-company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  font-size: 1.3em;
+  color: #f2b950;
+}
