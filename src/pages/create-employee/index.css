@@ -8,3 +8,19 @@
   align-self: center;
   background-position: center;
 }
+
+.details-create{
+  width: 100%;
+}
+
+.info-users-details h1{
+  font-weight: 600;
+  color: gray;
+}
+
+@media only screen and (min-width: 1200px) 
+{
+  .details-create{
+    max-width: 900px;
+  }
+}

@@ -8,8 +8,8 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ptBR from "date-fns/locale/pt-BR";
-import { useFormik, TextField } from "formik";
-import { useToasts } from "react-toast-notifications";
+import { useFormik } from "formik";
+import { toast } from 'react-toastify';
 import CurrencyInput from "react-currency-input-field";
 registerLocale("ptBR", ptBR);
 
@@ -55,7 +55,6 @@ export default function EditAndDetailsEmployee() {
   });
 
   const { id, edit } = useParams();
-  const { addToast } = useToasts();
   const formik = useFormik({
     initialValues: intialData(user),
     enableReinitialize: true,
@@ -78,12 +77,28 @@ export default function EditAndDetailsEmployee() {
   const editUser = async (user) => {
     await EmployeeService.edit(id, user)
       .then(() => {
-        addToast("Alterado com suceso!", { appearance: "success" });
+          toast.success('Alterado com sucesso!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });          
       })
       .catch((err) => {
-        addToast("Não foi possível concluir a operação!", {
-          appearance: "error"
-        });
+        toast.error('Não foi possível realizar a operação!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       });
   };
 
@@ -103,6 +118,7 @@ export default function EditAndDetailsEmployee() {
 
   return (
     <section className="details-section">
+      <div className="edit-details">
       <div className="go-back">
         <button className="back" onClick={back}>
           <FontAwesomeIcon className="icon-arrow" icon={faArrowLeft} />
@@ -167,9 +183,8 @@ export default function EditAndDetailsEmployee() {
             dateFormat="dd/MM/yyyy"
             selected={formik.values.date}
             onChange={(value) => {
-              formik.setFieldValue("date", Date.parse(value));
+              formik.setFieldValue("date", value);
             }}
-            renderInput={(params) => <TextField {...params} />}
           />
           {formik.touched.date && formik.errors.date && (
             <span className="text-red-400">{formik.errors.date}</span>
@@ -193,6 +208,7 @@ export default function EditAndDetailsEmployee() {
         </div>
         {exibirSalvar(edit)}
       </form>
+      </div>
     </section>
   );
 }

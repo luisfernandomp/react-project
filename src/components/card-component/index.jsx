@@ -1,6 +1,6 @@
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export default function CardComponent({
   id,
@@ -8,10 +8,11 @@ export default function CardComponent({
   image,
   status,
   editUser,
-  handleUserClick
+  handleUserClick,
+  handleShow
 }) {
   return (
-    <article>
+    <article className="article-employee">
       <div className="info-employee">
         <div className="details" onClick={() => handleUserClick(id)}>
           <div
@@ -28,6 +29,9 @@ export default function CardComponent({
         </div>
         <div className="edit" onClick={() => editUser(id)}>
           <FontAwesomeIcon icon={faPenToSquare} />
+        </div>
+        <div className="delete" onClick={() => handleShow(id)}>
+          <FontAwesomeIcon icon={faTrash} />
         </div>
       </div>
     </article>

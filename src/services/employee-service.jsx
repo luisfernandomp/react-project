@@ -16,9 +16,14 @@ const edit = (id, user) => {
   return http.put(`users/${id}`, user);
 };
 
+const deleteUser = (id) => {
+  return http.delete(`users/${id}`);
+}
+
 export default {
   listar,
   getById,
   edit,
-  create
+  create,
+  deleteUser
 };

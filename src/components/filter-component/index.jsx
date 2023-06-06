@@ -5,6 +5,7 @@ import { faMagnifyingGlass, faFilter } from "@fortawesome/free-solid-svg-icons";
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ptBR from "date-fns/locale/pt-BR";
+
 registerLocale("ptBR", ptBR);
 
 export default function FilterComponent({
@@ -29,11 +30,11 @@ export default function FilterComponent({
   };
 
   return (
-    <div className="container">
+    <div className="container-filter">
       <div className="filter">
         <div className="filter-name">
           <input
-            className="input shadow"
+            className="input "
             type="text"
             onChange={handleChangeName}
             placeholder="Procure por um funcionário"
@@ -42,7 +43,7 @@ export default function FilterComponent({
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </div>
         </div>
-        <div className="icon-filter shadow" onClick={handleClick}>
+        <div className="icon-filter" onClick={handleClick}>
           <FontAwesomeIcon icon={faFilter} />
         </div>
       </div>
@@ -52,16 +53,19 @@ export default function FilterComponent({
           display: isActive ? "block" : "none"
         }}
       >
-        <div>Filtros</div>
+        <div className="text-filtros">Filtros</div>
         <div
           className="others-filters"
           style={{
             display: isActive ? "flex" : "none"
           }}
         >
-          <DatePicker
+            <DatePicker
             locale="ptBR"
-            className="date-picker shadow"
+            className="datepicker"
+            todayBtn="linked"
+            autoclose={true}
+            dateFormat="dd/MM/yyyy"
             placeholderText="Intervalo de data"
             selected={startDate}
             onChange={handleChange}
@@ -71,7 +75,7 @@ export default function FilterComponent({
           />
           <select
             onChange={handleChangeStatus}
-            className="shadow"
+            className="select-status"
             name="status-user"
             id="status-user"
           >

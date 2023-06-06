@@ -3,12 +3,16 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box !important;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
-  background-color: #f0f1f2;
+  background-color: #e3e2e242 !important;
 }
 
 .text-negrito {

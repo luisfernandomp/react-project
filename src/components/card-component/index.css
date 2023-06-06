@@ -1,4 +1,4 @@
-article {
+.article-employee {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -6,8 +6,8 @@ article {
 }
 
 .info-employee {
-  width: 95%;
-  height: 78px;
+  width: 100%;
+  height: 98px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
@@ -45,19 +45,11 @@ article {
 .details {
   display: flex;
   height: 100%;
-  justify-content: center;
+  width: 85%;
+  justify-content: flex-start;
   align-items: center;
 }
 
-.edit {
-  padding: 4.5%;
-  font-size: 1.1em;
-  color: gray;
-}
-
-.edit:hover {
-  color: #f2b950;
-}
 
 .status {
   margin-top: 4px;
@@ -76,9 +68,58 @@ article {
 }
 
 .status-ativo {
-  background-color: greenyellow;
+  background-color: #6fe2cb;
 }
 
 .status-inativo {
-  background-color: red;
+  background-color: #dc143c;
 }
+
+.delete, .edit{
+  height: 100%;
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete{
+  color: #ffff;
+  background-color: #cf0a30;
+  border-radius: 0 8px 8px 0;
+}
+
+.edit {
+  color: gray;
+}
+
+.edit:hover, .delete:hover {
+  color: #f2b950;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
+{
+  .info-employee {
+    height: 88px;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) 
+{
+  .new-employee {
+    font-size: 0.8em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

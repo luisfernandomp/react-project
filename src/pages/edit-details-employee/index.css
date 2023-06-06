@@ -1,6 +1,14 @@
 .details-section {
   width: 100%;
   padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.edit-details{
+  width: 100%;
 }
 
 .img-perfil {
@@ -106,5 +114,18 @@ label {
   border: 0;
   border-radius: 10px;
   color: #ffffff;
-  background-color: green;
+  background-color: rgb(36, 194, 36);
 }
+
+
+@media only screen and (min-width: 1200px) 
+{
+  .edit-details{
+    max-width: 900px;
+  }
+
+  .text-red-400 {
+    font-size: 12px;
+  }
+}
+

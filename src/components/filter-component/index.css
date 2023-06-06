@@ -1,4 +1,4 @@
-.container {
+.container-filter {
   width: 100%;
   display: flex;
   padding: 10px 5px;
@@ -22,22 +22,18 @@
   left: 13px;
 }
 
-.date-picker {
-  background-color: #ffffff;
-  border-radius: 40px;
-  width: 80%;
+.datepicker {
   height: 45px;
-  color: gray;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: 0;
-  margin: 0;
+  padding: 5px 20px;
+  color: gray;
+  border-radius: 40px;
+  width: 100%;
+  margin-top: 16px;
 }
 
 .filter-name {
-  width: 85%;
+  width: 92%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,12 +47,15 @@
   height: 45px;
   color: gray;
   border-radius: 40px;
-  padding: 20px 35px;
+  height: 45px;
+  padding: 5px 40px;
 }
 
-select {
+.select-status {
   height: 45px;
+  width: 100%;
   border: 0;
+  margin-top: 16px;
   padding: 5px 20px;
   color: gray;
   border-radius: 40px;
@@ -87,7 +86,7 @@ select {
 
 .others-filters {
   width: 100%;
-  height: 60px;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start !important;
   justify-items: flex-start;
@@ -99,9 +98,24 @@ select {
   padding: 0 10px 0 10px;
 }
 
-.filtros div {
+.text-filtros{
   color: gray;
-  font-weight: 600;
-  font-size: 0.7em;
+  font-size: 0.75rem;
+  color: gray;
   text-transform: uppercase;
+  font-weight: 600;
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) 
+{
+  .others-filters {
+    flex-direction: row;
+  }
+
+  .datepicker
+  {
+    width: 96%;
+  }
 }
